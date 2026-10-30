@@ -120,6 +120,7 @@ Console.WriteLine("\n=== CA 4: NGOAI LE KHI RONG ===");
 // Ghi nhận phép kiểm tra GetMin trên ngăn xếp rỗng.
 total++;
 
+// Gọi GetMin khi không có phần tử để xác nhận hành vi lỗi.
 try
 {
     // GetMin phải ném ngoại lệ vì không có phần tử.
@@ -128,6 +129,7 @@ try
     // Nếu không có ngoại lệ thì phép kiểm tra thất bại.
     Console.WriteLine("GetMin: FAIL - khong nem ngoai le");
 }
+// Chỉ tính đạt khi GetMin ném đúng InvalidOperationException.
 catch (InvalidOperationException)
 {
     // Ghi nhận chương trình ném đúng loại ngoại lệ.
@@ -140,6 +142,7 @@ catch (InvalidOperationException)
 // Ghi nhận phép kiểm tra Pop trên ngăn xếp rỗng.
 total++;
 
+// Gọi Pop khi không có phần tử để xác nhận hành vi lỗi.
 try
 {
     // Pop phải ném ngoại lệ vì không có phần tử để lấy.
@@ -148,6 +151,7 @@ try
     // Nếu không có ngoại lệ thì phép kiểm tra thất bại.
     Console.WriteLine("Pop: FAIL - khong nem ngoai le");
 }
+// Chỉ tính đạt khi Pop ném đúng InvalidOperationException.
 catch (InvalidOperationException)
 {
     // Ghi nhận Pop xử lý đúng ngăn xếp rỗng.
